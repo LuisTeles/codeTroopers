@@ -1,26 +1,21 @@
 #include <iostream>
 using namespace std;
- int main()
- {
+
+int main() {
     int x, y;
     cin >> x >> y;
 
     if (x > y) {
-        int temp = x;
-        x = y;
-        y = temp;
+        swap(x,y);
     }
 
-    int sum = 0;
-
     for (int i = x + 1; i < y; i++) { //muito importante que i = x + 1 para que o valor de x inicial nao seja levado em consideração na soma
-        if (i%2 != 0)
+        if (i%5 == 2 || i%5 == 3)
         {
-            sum += (i);
+            cout << i << endl;
         }
     }
 
-    cout << sum << endl;
 
     return 0;
- }
+}
